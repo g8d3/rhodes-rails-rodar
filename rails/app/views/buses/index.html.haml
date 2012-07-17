@@ -1,0 +1,16 @@
+%h1 Listing buses
+%table.table
+  %tr
+    %th Seats
+    %th Company
+    %th Actions
+  - @buses.each do |bus|
+    %tr
+      %td= bus.seats
+      %td= bus.company
+      %td
+        = btn_primary 'Show', bus
+        = btn_primary 'Edit', edit_bus_path(bus)
+        = btn_danger 'Destroy', bus, confirm: 'Are you sure?', method: :delete
+%br/
+= btn 'New Bus', new_bus_path

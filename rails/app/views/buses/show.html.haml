@@ -1,0 +1,10 @@
+- if notice
+  %p.alert.alert-info= notice
+%p
+  %b Seats:
+  = @bus.seats
+%p
+  %b Company:
+  = @bus.company_id
+= link_to 'Edit', edit_bus_path(@bus), class: 'btn'
+= link_to 'Back', buses_path, class: 'btn'

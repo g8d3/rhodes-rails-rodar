@@ -1,0 +1,18 @@
+%h1 Listing companies
+
+%table.table
+  %tr
+    %th Name
+    %th Action
+
+  - @companies.each do |company|
+    %tr
+      %td= company.name
+      %td
+        = btn_primary 'Show', company
+        = btn_primary 'Edit', edit_company_path(company)
+        = btn_danger 'Destroy', company, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= btn 'New Company', new_company_path

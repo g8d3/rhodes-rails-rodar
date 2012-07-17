@@ -1,0 +1,22 @@
+#Sources
+:sources:
+  Bus:
+    :poll_interval: 300
+    :partition_type: app
+  Company:
+    :poll_interval: 300
+    :partition_type: app
+
+:development:
+  :licensefile: settings/license.key
+  :redis: localhost:6379
+  :syncserver: http://localhost:9292/rodar/
+  :api_token: 977ec196c3e64d6abf457f86e85e41e6
+:test:
+  :licensefile: settings/license.key
+  :redis: localhost:6379
+  :syncserver: http://localhost:9292/rodar/
+:production:
+  :licensefile: settings/license.key
+  :redis: localhost:6379
+  :syncserver: http://localhost:9292/rodar/

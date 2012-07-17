@@ -1,0 +1,9 @@
+- if notice
+  %p.alert.alert-info= notice
+
+%p
+  %b Name:
+  = @company.name
+
+= btn 'Edit', edit_company_path(@company)
+= btn 'Back', companies_path
